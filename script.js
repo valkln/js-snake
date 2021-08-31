@@ -32,7 +32,15 @@ let gameover = function () {
 	ctx.font = "60px Courier";
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
-	ctx.fillText('You LOST!', width / 2, height / 2);
+	ctx.fillText('You LOST!', width / 2, 150);
+	ctx.font = "30px Courier";
+	ctx.fillText('press spacebar', width / 2, 200);
+	ctx.fillText('to try again', width / 2, 230);
+	document.addEventListener('keyup', event => {
+		if (event.code === 'Space') {
+			location.reload();
+		}
+	})
 };
 
 //circle
